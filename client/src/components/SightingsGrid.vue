@@ -20,6 +20,10 @@ export default {
 	},
 	mounted(){
     this.fetchData();
+eventBus.$on('sighting-added', (sighting) => {
+	console.log(sighting);
+	this.sightings.push(sighting)
+})
   },
   methods: {
     fetchData(){
